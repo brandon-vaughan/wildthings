@@ -295,3 +295,9 @@ td {
   padding: 0.2em 0; }
 
 /* ------- Fonts ------- */
+@font-face {
+  font-family: 'ArrowsRegular';
+  src: url("fonts/arrows-regular-webfont.eot");
+  src: url("fonts/arrows-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/arrows-regular-webfont.woff") format("woff"), url("fonts/arrows-regular-webfont.ttf") format("truetype"), url("fonts/arrows-regular-webfont.svg#ArrowsRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
