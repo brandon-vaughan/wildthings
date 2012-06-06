@@ -49,6 +49,10 @@ function Prez(elem, options) {
   // get movement type ( transition or callback )
   this.movement = isTransition ? 'transition' : 'animate';
 
+  // Build simple deck and frame array for class injection
+  this.slidesIndex = ['one','two','three','four', 'five'];
+  this.propsIndex = ['','one','two','three','four'];
+
   this.setup();
 
 }
