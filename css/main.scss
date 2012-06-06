@@ -380,3 +380,16 @@ body {
 
 } /* end backdrop */
 
+  article {
+    display: none;
+    height: 100%;
+    overflow: visible;
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+
+    .background {
+      display: block;
+      height: 100%;
+      position: absolute;
+    }
