@@ -264,3 +264,26 @@ body {
   font-size: 25px;
 }
 
+/* ------- Prez -------- */
+
+#deck {
+  background-color: #B1D0A4;
+  background-image: url(../images/shadow.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  @include trans(background-color 1s);
+
+  &.two {
+    background: #71968E;
+  }
+  &.three {
+    background: #263942;
+  }
+  &.four {
+    background: #19252C;
+  }
+
