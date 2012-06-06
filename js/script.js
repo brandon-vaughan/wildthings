@@ -64,6 +64,40 @@ Prez.defaults = {
 };
   // inject state class
   this.slides.addClass('is-' + this.movement);
+
+  // Queue key state changes
+  this.bindings();
+
+
+
+Prez.prototype.bindings = function() {
+
+  var instance = this;
+
+  $(document).keydown(function(e){
+
+    // Move Slide
+    if ( e.keyCode === 39 || e.keyCode === 37 ) {
+
+      var direction = e.keyCode === 39 ? 'next' : 'prev';
+      instance.move(direction);
+
+    }
+
+    // Move Props
+    if ( e.keyCode === 38 || e.keyCode === 40 ) {
+
+      var frame = e.keyCode === 40 ? 'next' : 'prev';
+      instance.moveProps(frame);
+
+    }
+
+    return false;
+
+  });
+
+};
+
   // Animate move if no transition
   if ( !isTransition ) {
     this.animate( this.effect );
