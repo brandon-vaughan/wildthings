@@ -1,7 +1,7 @@
 <?php
 
   /* Vars and Settings */
-  $baseUrl = dirname(__FILE__);
+  define( 'WILD_URL', 'http://wildthings' . dirname($_SERVER["SCRIPT_NAME"]) );
 
 ?>
 
@@ -13,25 +13,34 @@
     <title>Where the Wild Things Are</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<?= $baseUrl ?>/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Shadows+Into+Light|Amatic+SC' rel='stylesheet' type='text/css'>
 
-    <script src="<?= $baseUrl ?>/js/modernizr.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?= WILD_URL ?>css/jquery.snippet.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= WILD_URL ?>css/main.css">
+
+    <script src="<?= WILD_URL ?>js/modernizr.min.js"></script>
 
   </head>
 
   <body>
 
-    <section id="deck"></section>
+    <div id="prez">
 
-    <nav id="nav">
-      <a href="#prev" class="icon">l</a>
-      <a href="#next" class="icon">r</a>
-    </nav>
+      <section id="deck" class="one">
+        <?php include_once('slides/one.php'); ?>
+        <?php include_once('slides/two.php'); ?>
+        <?php include_once('slides/three.php'); ?>
+        <?php include_once('slides/four.php'); ?>
+      </section>
+
+    </div>
 
     <!-- Scripts -->
-    <script src="<?= $baseUrl ?>/js/jquery.min.js"></script>
-    <script src="<?= $baseUrl ?>/js/history/html4+html5/jquery.history.js"></script>
-    <script src="<?= $baseUrl ?>/js/script-ck.js"></script>
+    <script src="<?= WILD_URL ?>js/jquery.min.js"></script>
+    <script src="<?= WILD_URL ?>js/history/html4+html5/jquery.history.js"></script>
+    <script src="<?= WILD_URL ?>js/jquery.fittext.js"></script>
+    <script src="<?= WILD_URL ?>js/jquery.snippet.min.js"></script>
+    <script src="<?= WILD_URL ?>js/script-ck.js"></script>
     <!-- end Scripts -->
 
   </body>
