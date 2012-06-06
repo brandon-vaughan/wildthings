@@ -8,6 +8,8 @@ $(function() {
 
 /* ------------------- Main Presentation Class ------------------- */
 
+var isTransition = Modernizr.csstransitions;
+
 function Prez(elem, options) {
 
   if ( !elem ) {
@@ -44,6 +46,8 @@ function Prez(elem, options) {
   this.nav = this.prez.find('#nav');
 
   this.options = options;
+  // get movement type ( transition or callback )
+  this.movement = isTransition ? 'transition' : 'animate';
 
   this.setup();
 
@@ -54,3 +58,9 @@ Prez.defaults = {
   autoPlay: false,
   duration: 1000
 };
+  // inject state class
+  this.slides.addClass('is-' + this.movement);
+  // Animate move if no transition
+  if ( !isTransition ) {
+    this.animate( this.effect );
+  }
