@@ -1,4 +1,4 @@
 .htaccess
 sftp-config.json
 .sass-cache
-css/main.scss
+*-ck*
