@@ -62,12 +62,20 @@ Prez.defaults = {
   autoPlay: false,
   duration: 1000
 };
+
+Prez.prototype.setup = function() {
+
+
+  this.onDisplay = 0;
+  this.onStage = 0;
+
   // inject state class
   this.slides.addClass('is-' + this.movement);
 
   // Queue key state changes
   this.bindings();
 
+};
 
 
 Prez.prototype.bindings = function() {
