@@ -1,4 +1,11 @@
 
+$(function() {
+  $('#one h1').fitText(1.2);
+  $('pre.css').snippet('css', {style: 'darkness'});
+  $('pre.js').snippet('css', {style: 'darkness'});
+
+});
+
 /* ------------------- Main Presentation Class ------------------- */
 
 function Prez(elem, options) {
