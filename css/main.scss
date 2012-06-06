@@ -287,3 +287,96 @@ body {
     background: #19252C;
   }
 
+/* backdrop */
+.backdrop {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  span {
+    display: block;
+    position: absolute;
+    z-index: 100;
+  }
+
+  .large {
+    @include transform(scale(6));
+    opacity: .07;
+    z-index: 2;
+  }
+
+  .tree {
+    background: url(../images/tree.png) no-repeat;
+    height: 520px;
+    width: 405px;
+    bottom: -10px;
+    left: 100px;
+
+    &.large {
+      @include transform(scale(6));
+      opacity: .07;
+      z-index: 2;
+      bottom: 17%;
+
+      &.one {
+        left: -500px;
+      }
+      &.two {
+        left: 300px;
+      }
+
+    } /* end large */
+
+    &.three {
+      left: -50px;
+      z-index: 50;
+      @include transform(scale(1.3));
+    }
+
+  } /* end tree */
+
+  .tree_two {
+    background: url(../images/tree2.png) no-repeat;
+    height: 520px;
+    width: 420px;
+    bottom: -40px;
+    right: 600px;
+
+    &.one {
+      right: -200px;
+    }
+    &.two {
+      right: 1200px;
+    }
+    &.three {
+      left: 1000px;
+      bottom: -70px;
+      z-index: 50;
+      @include transform(scale(.8));
+    }
+
+    &.large {
+      @include transform(scale(6));
+      opacity: .07;
+      z-index: 2;
+      bottom: 28%;
+
+      &.one {
+        left: 600px;
+        bottom: 40%;
+      }
+      &.two {
+        left: 900px;
+      }
+      &.three {
+        bottom: 61%;
+        left: auto;
+        right: 75%;
+      }
+
+    } /* end large */
+
+  } /* end tree_two */
+
+} /* end backdrop */
+
