@@ -1,12 +1,8 @@
-
 <article id="four" class="on-display">
 
   <div class="backdrop">
-
     <!-- Trees -->
-
     <span id="" class="tree_two large two"></span>
-
   </div>
 
   <div class="copy">

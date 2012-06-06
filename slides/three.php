@@ -1,20 +1,15 @@
-
 <article id="three">
 
   <div class="backdrop">
 
     <!-- Trees -->
-
     <span class="tree large two"></span>
-    
 
   </div>
 
   <div class="copy">
     <h1><span>Till jQuery Said</span> Be Still and Tamed Them</h1>
     <p>It's time to transfer the work away from jQuery first to CSS3 first and use jQuery as the fallback for basic effects and UI embelishments.</p>
-
-
   </div>
 
   <div class="scene">
@@ -63,7 +58,6 @@
         this.pastSlide.animate(this[this.effect].past, this.duration );
         this.futureSlide.animate(this[this.effect].future, this.duration );
       };
-
     </pre>
 
   </div>

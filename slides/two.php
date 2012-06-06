@@ -1,4 +1,3 @@
-
 <article id="two">
 
   <div class="backdrop">
@@ -15,7 +14,6 @@
   <div class="copy">
     <h1><span>CSS3</span> Roared Its Terrible Roars</h1>
     <p>CSS3 has been gaining a ton of traction as we break technological boundaries in safe environments such as Chrome and Safari</p>
-
   </div>
 
   <div class="scene">

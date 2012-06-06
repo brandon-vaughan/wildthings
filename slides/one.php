@@ -1,8 +1,6 @@
-
 <article id="one" class="on-display">
 
   <div class="backdrop">
-
     <!-- Trees -->
     <span id="" class="tree large one"></span>
     <span id="" class="tree large two"></span>
