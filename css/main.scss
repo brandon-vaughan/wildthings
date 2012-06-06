@@ -481,3 +481,70 @@ body {
 
     } /* end slideone */
 
+    &#two {
+
+      .copy {
+        left: 16%;
+        position: absolute;
+        top: 10%;
+        width: 40%;
+      }
+      .tree_two.small.three {
+        left: 60%;
+      }
+      .tree.one {
+        left: auto;
+        right: 1%;
+        z-index: 10;
+      }
+
+      .boy,
+      .monster {
+        @include trans((left 1.5s, right 1s, opacity 1s));
+      }
+
+      .boy {
+        bottom: -5px;
+        position: absolute;
+        height: 215px;
+        width: 155px;
+
+        &.leaving {
+          background: url(../images/boy-leaving.png) no-repeat;
+          right: -10%;
+          opacity: 0;
+        }
+      }
+
+      .monster {
+        bottom: -10px;
+        position: absolute;
+        height: 376px;
+        width: 320px;
+
+        background: url(../images/monster-leaving.png) no-repeat;
+        left: -50%;
+        opacity: 0;
+
+      }
+
+      /* Building Prop Scenes */
+      .scene.one {
+
+        .monster {
+          background: url(../images/monster-coming.png) no-repeat;
+          left: 45%;
+          opacity: 1;
+        }
+
+      }
+      .scene.two {
+        .boy {
+          opacity: 1;
+          background: url(../images/boy-coming.png) no-repeat;
+          right: 60%;
+        }
+      }
+
+    } /* end #two */
+
