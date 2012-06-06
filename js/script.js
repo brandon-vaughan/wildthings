@@ -43,9 +43,9 @@ function Prez(elem, options) {
   // Setup Variables
   this.prez = elem;
   this.deck = this.prez.find('#deck');
+  this.slides = this.deck.find('article');
   this.nav = this.prez.find('#nav');
 
-  this.options = options;
   // get movement type ( transition or callback )
   this.movement = isTransition ? 'transition' : 'animate';
 
@@ -106,7 +106,67 @@ Prez.prototype.bindings = function() {
 
 };
 
+Prez.prototype.move = function(direction) {
+
+  this.curClass = this.slidesIndex[this.onDisplay];
+
+  this.index = direction === 'next' ? (this.onDisplay + 1) : (this.onDisplay - 1);
+
+  this.onDisplay = ( this.index + this.slidesIndex.length ) % this.slidesIndex.length;
+
+  this.moveClass = this.slidesIndex[this.onDisplay];
+
+  this.pastClass = this.slidesIndex[( ( this.onDisplay - 1 ) + this.slidesIndex.length ) % this.slidesIndex.length];
+  this.comingClass = this.slidesIndex[( ( this.onDisplay + 1 ) + this.slidesIndex.length ) % this.slidesIndex.length];
+
+  // Assign Classes
+  this.deck.removeClass(this.curClass).addClass(this.moveClass);
+
+  // Reset on display
+  this.slides.removeClass('on-display').removeClass('just-past').removeClass('coming-up');
+
+  // Select elements
+  this.$onDisplay = $('#'+this.moveClass);
+  this.$past = $('#'+this.pastClass);
+  this.$coming = $('#'+this.comingClass);
+
+  this.$onDisplay.addClass('on-display');
+  this.$past.toggleClass('just-past');
+  this.$coming.toggleClass('coming-up');
+
   // Animate move if no transition
   if ( !isTransition ) {
     this.animate( this.effect );
   }
+
+  // Reset Stage for props
+  this.onStage = 0;
+
+};
+
+Prez.prototype.moveProps = function(direction) {
+
+  this.curpropClass = this.propsIndex[this.onStage];
+
+  this.propIndex = direction === 'next' ? (this.onStage + 1) : (this.onStage - 1);
+
+  this.onStage = ( this.propIndex + this.propsIndex.length ) % this.propsIndex.length;
+
+  this.propClass = this.propsIndex[this.onStage];
+
+  // Assign Classes
+  this.$onDisplay.find('.scene').removeClass(this.curpropClass).addClass(this.propClass);
+
+};
+
+Prez.prototype.animate = function() {
+
+  // queue up jquery objects and animate them via the effecttype object
+  this.$onDisplay.animate(this[this.effect].onDisplay, this.duration );
+  this.$past.animate(this[this.effect].past, this.duration );
+  this.$coming.animate(this[this.effect].coming, this.duration );
+
+};
+
+
+var wildthings = new Prez($('#prez'));
