@@ -603,3 +603,27 @@ body {
 
     } /* end #three */
 
+    &#four {
+
+      h1,p {
+        color: white;
+        text-shadow: 0 1px 0 rgba(0,0,0,.5);
+      }
+
+      .copy {
+        left: 30%;
+        position: absolute;
+        top: 25%;
+        width: 40%;
+      }
+
+      .goodbye {
+        background: url(../images/goodbye.png) no-repeat;
+        height: 202px;
+        width: 204px;
+        position: absolute;
+        bottom: -10px;
+        left: 40%;
+      }
+    } /* end #four */
+
