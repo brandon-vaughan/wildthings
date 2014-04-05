@@ -475,6 +475,10 @@ body {
         font-size: .5em;
         letter-spacing: 2px;
         line-height: .5em; }
+      #deck article h1 small {
+        font-size: .3em;
+        display: block;
+      }
     #deck article p {
       color: rgba(0, 0, 0, 0.5);
       font-family: 'Shadows Into Light', cursive;
